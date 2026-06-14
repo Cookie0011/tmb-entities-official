@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-heading: 'Barlow', 'Barlow Fallback', sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* TMB Brand Colors */
+  --color-navy: #062544;
+  --color-navy-light: #0a3a6e;
+  --color-navy-dark: #031628;
+  --color-orange: #F97316;
+  --color-orange-dark: #ea6700;
+  --color-charcoal: #1E293B;
+  --color-light-grey: #F5F7FA;
+
+  /* Design tokens */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-destructive: var(--destructive);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  --background: #F5F7FA;
+  --foreground: #062544;
+  --card: #FFFFFF;
+  --card-foreground: #062544;
+  --popover: #FFFFFF;
+  --popover-foreground: #062544;
+  --primary: #F97316;
+  --primary-foreground: #FFFFFF;
+  --secondary: #062544;
+  --secondary-foreground: #FFFFFF;
+  --muted: #e8ecf2;
+  --muted-foreground: #64748b;
+  --accent: #F97316;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #dde3ec;
+  --input: #dde3ec;
+  --ring: #F97316;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    @apply bg-background scroll-smooth;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #062544;
+}
+::-webkit-scrollbar-thumb {
+  background: #F97316;
+  border-radius: 3px;
+}
+
+/* Ecosystem wheel glow */
+.ecosystem-glow {
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.3), 0 0 80px rgba(249, 115, 22, 0.1);
+}
+
+/* Counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
