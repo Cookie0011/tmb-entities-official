@@ -203,19 +203,7 @@ export default function Footer() {
             Six Industries. One Vision.
           </p>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 text-center sm:text-left">
-          <p className="text-white/30 text-sm">
-            Created by{' '}
-            <a
-              href="https://www.skyground.co.za"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-[#F97316] font-semibold transition-colors"
-            >
-              Sky Ground Solutions
-            </a>
-          </p>
-        </div>
+
       </div>
     </footer>
   )
